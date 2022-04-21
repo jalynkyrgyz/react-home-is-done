@@ -1,0 +1,68 @@
+.navbar {
+    background-color: rgb(14, 2, 49);
+    padding: 15px 10px;
+
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__logo {
+        color: #c6f323;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 0.2em;
+    }
+
+    &__logo-icon {
+        color: rgb(241, 241, 32);
+        padding-right: 5px;
+        font-size: 30px;
+
+    }
+
+    &__toggle {
+        display: none;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__menu-link {
+        color: #fff;
+        transition: 0.2s ease;
+        text-transform: capitalize;
+
+        &.active,
+        &:hover {
+            color: #d6811f;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        &__toggle {
+            display: block;
+        }
+
+        &__menu {
+            display: none;
+
+            &--show {
+                padding-top: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+            }
+        }
+    }
+}
